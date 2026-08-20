@@ -293,3 +293,14 @@ supabaseClient
   )
 
   .subscribe();
+  window.addEventListener("DOMContentLoaded", () => {
+  const hash = window.location.hash;
+
+  if (hash === "#buyer") {
+    showBuyer();
+  }
+
+  if (hash === "#farmer") {
+    showFarmer();
+  }
+});
