@@ -1,0 +1,343 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f8f4;
+  color: #23352b;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 8%;
+
+  background: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2f6b43;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.hero {
+  min-height: 75vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 80px 10%;
+
+  background:
+    linear-gradient(
+      rgba(246, 251, 246, 0.92),
+      rgba(246, 251, 246, 0.92)
+    );
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #3d7a4d;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 1.7;
+
+  margin-bottom: 35px;
+
+  color: #58665d;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  border: none;
+
+  padding: 15px 25px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  background: #3d7a4d;
+
+  color: white;
+}
+
+button.secondary {
+  background: white;
+  color: #3d7a4d;
+
+  border: 2px solid #3d7a4d;
+}
+
+.section {
+  padding: 70px 10%;
+}
+
+.section-header {
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 40px;
+
+  margin-bottom: 10px;
+
+  color: #2f6b43;
+}
+
+.form-card {
+  max-width: 650px;
+
+  margin: auto;
+
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.form-card label {
+  font-weight: bold;
+
+  margin-top: 10px;
+}
+
+.form-card input,
+.form-card select {
+  padding: 13px;
+
+  border-radius: 8px;
+
+  border: 1px solid #ddd;
+
+  font-size: 16px;
+}
+
+.form-card button {
+  margin-top: 20px;
+}
+
+.request-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 25px;
+}
+
+.request-card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.08);
+}
+
+.request-card h3 {
+  color: #2f6b43;
+
+  margin-bottom: 20px;
+}
+
+.request-card p {
+  margin: 10px 0;
+
+  color: #555;
+}
+
+.verified {
+  color: #2f8a4a;
+
+  font-weight: bold;
+
+  margin-top: 15px;
+}
+
+.whatsapp {
+  display: block;
+
+  text-align: center;
+
+  margin-top: 20px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  background: #2f8a4a;
+
+  color: white;
+
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+}
+
+/* ================================
+   RENCANA PEMBAYARAN
+================================ */
+
+.payment-section {
+  width: 100%;
+  margin-top: 25px;
+  padding: 25px;
+  background: #f4f8f3;
+  border: 1px solid #dce9dc;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-section h3 {
+  margin: 0;
+  color: #2f6b43;
+  font-size: 22px;
+}
+
+.payment-description {
+  margin: 0 0 10px 0;
+  color: #68756c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.payment-section label {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.payment-section input,
+.payment-section select,
+.payment-section textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px;
+
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+
+  background: white;
+
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.payment-section textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+#paymentTermsBox {
+  width: 100%;
+}
+
+#paymentTermsBox.hidden {
+  display: none;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+
+  margin-top: 20px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #3d7a4d;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.submit-button:hover {
+  background: #2f633d;
+}
+
+.submit-button:active {
+  transform: scale(0.99);
+}

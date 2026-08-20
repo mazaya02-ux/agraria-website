@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AGRARIA</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">🌱 AGRARIA</div>
+
+  <nav>
+    <a href="#home">Beranda</a>
+    <a href="#how">Cara Kerja</a>
+    <a href="#about">Tentang</a>
+  </nav>
+</header>
+
+
+<section id="home" class="hero">
+
+  <div class="hero-content">
+
+    <h1>
+      Dari Petani,
+      <span>Langsung ke Pembeli.</span>
+    </h1>
+
+    <p>
+      AGRARIA menghubungkan petani dan pembeli
+      secara langsung untuk menciptakan perdagangan
+      hasil pertanian yang lebih transparan dan adil.
+    </p>
+
+    <div class="hero-buttons">
+
+      <button onclick="showBuyer()">
+        Saya Pembeli
+      </button>
+
+      <button class="secondary" onclick="showFarmer()">
+        Saya Petani
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="buyer-section" class="section hidden">
+
+  <div class="section-header">
+
+    <h2>Buyer Request</h2>
+
+    <p>
+      Sampaikan kebutuhan hasil pertanian Anda.
+    </p>
+
+  </div>
+
+
+  <form id="buyerForm" class="form-card">
+
+    <label>Nama / Nama Usaha</label>
+    <input type="text" id="buyerName" required>
+
+
+    <label>Nomor WhatsApp</label>
+    <input
+      type="text"
+      id="phone"
+      placeholder="628123456789"
+      required
+    >
+
+
+    <label>Lokasi</label>
+    <input type="text" id="location" required>
+
+
+    <label>Komoditas</label>
+
+    <select id="commodity" required>
+
+      <option value="">
+        Pilih komoditas
+      </option>
+
+      <option value="Beras">
+        Beras
+      </option>
+
+      <option value="Gabah">
+        Gabah
+      </option>
+
+      <option value="Jagung">
+        Jagung
+      </option>
+
+    </select>
+
+
+    <label>Jumlah Kebutuhan (kg)</label>
+
+    <input
+      type="number"
+      id="quantity"
+      required
+    >
+
+
+    <label>Kualitas / Spesifikasi</label>
+
+    <input
+      type="text"
+      id="quality"
+      placeholder="Contoh: Beras medium"
+    >
+<label>Kisaran Harga / kg</label>
+
+<input
+  type="number"
+  id="price"
+  placeholder="13000"
+>
+
+    <label>Tanggal Dibutuhkan</label>
+
+    <input
+      type="date"
+      id="neededDate"
+      required
+    >
+
+
+<!-- RENCANA PEMBAYARAN -->
+
+<div class="payment-section">
+
+  <h3>Rencana Pembayaran</h3>
+
+  <p class="payment-description">
+    Tentukan metode dan skema pembayaran yang akan digunakan.
+  </p>
+
+  <label>Metode Pembayaran</label>
+
+  <select id="paymentMethod" required>
+    <option value="">
+      Pilih metode pembayaran
+    </option>
+
+    <option value="Transfer Bank">
+      Transfer Bank
+    </option>
+
+    <option value="Cash">
+      Cash
+    </option>
+
+    <option value="Lainnya">
+      Lainnya
+    </option>
+  </select>
+
+
+  <label>Bank yang Digunakan</label>
+
+  <select id="bankName">
+    <option value="">
+      Pilih bank
+    </option>
+
+    <option value="BCA">
+      BCA
+    </option>
+
+    <option value="BRI">
+      BRI
+    </option>
+
+    <option value="BNI">
+      BNI
+    </option>
+
+    <option value="Mandiri">
+      Mandiri
+    </option>
+
+    <option value="BSI">
+      BSI
+    </option>
+
+    <option value="Bank Lainnya">
+      Bank Lainnya
+    </option>
+  </select>
+
+
+  <label>Nama Pemilik Rekening</label>
+
+  <input
+    type="text"
+    id="accountName"
+    placeholder="Nama pemilik rekening"
+  >
+
+
+  <label>Nomor Rekening</label>
+
+  <input
+    type="text"
+    id="accountNumber"
+    placeholder="Nomor rekening"
+  >
+
+
+  <label>Skema Pembayaran</label>
+
+  <select id="paymentScheme" required>
+    <option value="">
+      Pilih skema pembayaran
+    </option>
+
+    <option value="Lunas di awal">
+      Lunas di awal
+    </option>
+
+    <option value="Lunas setelah barang diterima">
+      Lunas setelah barang diterima
+    </option>
+
+    <option value="Cicilan / Termin">
+      Cicilan / Termin
+    </option>
+  </select>
+
+
+  <div id="paymentTermsBox" class="hidden">
+
+    <label>Detail Skema Cicilan / Termin</label>
+
+    <textarea
+      id="paymentTerms"
+      rows="3"
+      placeholder="Contoh: 50% DP, 50% setelah barang diterima"
+    ></textarea>
+
+  </div>
+
+</div>
+ <button type="submit" class="submit-button">
+  Kirim Permintaan
+</button>
+
+  </form>
+
+</section>
+
+
+<section id="farmer-section" class="section hidden">
+
+  <div class="section-header">
+
+    <h2>Buyer Request Board</h2>
+
+    <p>
+      Temukan pembeli yang sedang membutuhkan
+      hasil panenmu.
+    </p>
+
+  </div>
+
+
+  <div id="requestBoard" class="request-grid">
+
+    <p>
+      Memuat permintaan pembeli...
+    </p>
+
+  </div>
+
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
