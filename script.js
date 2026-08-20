@@ -240,7 +240,46 @@ async function loadBuyerRequests() {
       <p>
         👤 ${request.buyer_name}
       </p>
+<p class="payment-title">
+  💳 Informasi Pembayaran
+</p>
 
+<p>
+  💳 Metode:
+  ${request.payment_method || "Belum ditentukan"}
+</p>
+
+${
+  request.payment_method === "Transfer Bank"
+  ? `
+    <p>
+      🏦 Bank:
+      ${request.bank_name || "Belum ditentukan"}
+    </p>
+  `
+  : ""
+}
+
+<p class="${
+  request.payment_scheme === "Cicilan / Termin"
+    ? "payment-installment"
+    : "payment-full"
+}">
+  📌 Skema:
+  ${request.payment_scheme || "Belum ditentukan"}
+</p>
+
+${
+  request.payment_scheme === "Cicilan / Termin" &&
+  request.payment_terms
+  ? `
+    <p class="payment-detail">
+      📝 Detail:
+      ${request.payment_terms}
+    </p>
+  `
+  : ""
+}
       ${
         request.verified
         ? `

@@ -341,3 +341,54 @@ button.secondary {
 .submit-button:active {
   transform: scale(0.99);
 }
+/* ================================
+   PAYMENT INFO ON BUYER CARD
+================================ */
+
+.payment-title {
+  margin-top: 18px;
+  padding-top: 15px;
+
+  border-top: 1px solid #e1e8e1;
+
+  color: #2f6b43;
+  font-weight: bold;
+}
+
+.payment-full {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: #e8f5e9;
+  color: #2e7d32;
+
+  font-weight: bold;
+}
+
+.payment-installment {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: #fff3e0;
+  color: #e65100;
+
+  font-weight: bold;
+}
+
+.payment-detail {
+  padding: 10px;
+
+  background: #f8faf8;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
